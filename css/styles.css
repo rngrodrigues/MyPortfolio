@@ -588,12 +588,11 @@ cursor: pointer;
 
 .div-grid {
     box-shadow: 0 0 0.8rem;
-    position: relative;
     border-radius: 5%;
+    position: relative;
     overflow: hidden;
     background-color: var(--cor-azul);
 }
-
 .texto-grid {
     position: absolute;
     display: flex;
@@ -624,8 +623,6 @@ cursor: pointer;
     backdrop-filter: blur(0.3rem);
 }
 
-
-
 .titulo-grid {
     display: flex;
     align-items: center;
@@ -648,7 +645,6 @@ cursor: pointer;
     padding-bottom: 1.2rem;
 
 }
-
 .deploy-grid {
     font-size: clamp(1rem, 2vw, 1.5rem);
     margin-right: 1.2rem;
@@ -664,8 +660,6 @@ cursor: pointer;
 .deploy-grid:hover {
     box-shadow: 0 0 10px gray;
 }
-
-
 .codigo-grid {
     font-size: clamp(1rem, 2vw, 1.5rem);
     padding: 0.5rem 1rem;
@@ -1102,4 +1096,10 @@ footer section {
 }
 .cem-vh {
     min-height: 100vh;
+}
+.fa-info-circle {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 23px;
 }
