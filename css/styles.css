@@ -578,12 +578,16 @@ cursor: pointer;
 
 #grid-projetos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(43.5rem, 1fr));
+    grid-template-columns: repeat(2, minmax(30rem, 1fr));
     gap: 5rem;
     max-width: 150rem;
     margin: 0 auto;
-    padding: clamp(1rem, 5vw, 5rem);
-
+    padding: clamp(2rem, 5vw, 3rem);
+}
+@media (max-width: 900px) {
+    #grid-projetos {
+        grid-template-columns: 1fr;
+    }
 }
 
 .div-grid {
