@@ -245,13 +245,13 @@ header {
 }
 
 #texto-inicio h1 {
-    font-size: clamp(2rem, 12vw, 8rem);
+    font-size: clamp(2.4rem, 12vw, 8rem);
     margin-bottom: 3rem;
     margin-top: 3rem;
 }
 
 #texto-inicio p:first-of-type {
-    font-size: clamp(1.4rem, 2.5vw, 2.5rem);
+    font-size: clamp(2.2rem, 2.5vw, 3rem);
     max-width: 100rem;
     margin-bottom: 3rem;
     padding: 0 0.4rem 0 0.4rem;
@@ -398,7 +398,7 @@ header {
 
 .fa-server,
 .fa-database,
-.fa-git-alt {
+.fa-desktop{
     color: var(--cor-azul);
 }
 
@@ -453,8 +453,7 @@ cursor: pointer;
   visibility: hidden;
     position: fixed;
     z-index: 2;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100vw;
     height: 100vh;
     overflow: auto;
@@ -475,7 +474,7 @@ cursor: pointer;
     margin:15rem auto;
     padding: 3rem;
     border-radius: 2rem;
-   width: 30%;
+   width: 20%;
    display: block;
     box-shadow: 0 0 0.8rem gray;
 }
@@ -487,43 +486,29 @@ cursor: pointer;
   }
   
 
-@media (max-width:1366px) {
-.modal-content {
- width: 70%;
-}
-.modal-content2 {
- width: 70%;
-}
-.modal-content3 {
- width: 70%;
-}
+@media (max-width: 1366px) {
+  .modal-content,
+  .modal-content2,
+  .modal-content3 {
+    width: 70%;
+  }
 }
 
-@media (max-width:766px) { 
-.modal-content {
- width: 90%;
-}
-.modal-content2 {
- width: 90%;
-}
-.modal-content3 {
- width: 90%;
-}
+@media (max-width: 766px) {
+  .modal-content,
+  .modal-content2,
+  .modal-content3 {
+    width: 90%;
+  }
 }
 
-@media (max-width:380px) { 
-.modal-content {
- width: 90%;
- margin:0.5rem auto;
-}
-.modal-content2 {
- width: 90%;
- margin:0.5rem auto;
-}
-.modal-content3 {
- width: 90%;
- margin:0.5rem auto;
-}
+@media (max-width: 380px) {
+  .modal-content,
+  .modal-content2,
+  .modal-content3 {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
 }
 
   .close:hover,
