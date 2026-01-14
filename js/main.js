@@ -48,7 +48,7 @@ function alterarTema() {
         el.classList.toggle("time-line-content-noturno");
     });
     // Alterna as classes do modal
-     document.querySelectorAll(".modal-content, modal-content2, modal-content3").forEach(el => {
+     document.querySelectorAll(".modal-content").forEach(el => {
         el.classList.toggle("dark-modal");
     });
 
