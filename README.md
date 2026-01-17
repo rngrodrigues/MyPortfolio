@@ -1,17 +1,25 @@
-# 💻 Deploy
+<h1 align="center">Renan Rodrigues (Portfólio)</h1>
 
-[Link para o site](https://devrenanrodrigues.vercel.app/)
+<p align="center">
+  ↓ Acesse o projeto
+</p>
 
-# 🧑‍💻 Portfólio Pessoal
+<p align="center">
+  <a href="https://devrenanrodrigues.vercel.app/">
+    <img src="https://img.shields.io/badge/deploy-online-green?style=for-the-badge&logo=vercel" />
+  </a>
+</p>
+
+# Portfólio Pessoal
 
 Um projeto web responsivo e organizado onde apresento meus projetos, habilidades, experiências e formas de contato.
 
-# 🔍 Sobre o projeto
+# Sobre o projeto
 
 O objetivo deste projeto é compartilhar meu trabalho como desenvolvedor e facilitar o contato com recrutadores e parceiros. 
 Busquei criar um site moderno, objetivo e totalmente responsivo.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 * Modo escuro com persistência da preferência no localStorage;
 * Menu fixo com efeito ao rolar a página;
@@ -25,7 +33,7 @@ Busquei criar um site moderno, objetivo e totalmente responsivo.
 * Formulário de contato funcional;
 * Design responsivo para mobile, tablet e desktop;
 
-## 🚀 Tecnologias 
+## Tecnologias 
 
 O projeto foi desenvolvido utilizando HTML, CSS e JavaScript puros, sem frameworks de frontend.
 Foram utilizados apenas serviços e bibliotecas externas via CDN para ícones, fontes e envio de formulário.
@@ -50,7 +58,7 @@ As tecnologias utilizadas foram:
 * Visual Studio Code;
 * Live Server (Extensão);
   
-## 📚 Aprendizados
+## Aprendizados
 
 * Organização de código HTML semântico;
 * Criação de layouts responsivos com CSS puro;
@@ -58,7 +66,7 @@ As tecnologias utilizadas foram:
 * Implementação de modo escuro com persistência de estado;
 * Boas práticas de usabilidade e experiência do usuário;
 
- # 📁 Estrutura
+ # Estrutura
 
 /assets  
   /img           -> Imagens do projeto  
@@ -69,7 +77,7 @@ As tecnologias utilizadas foram:
 /index.html  
 /README.md
 
-# 🖼️ Prévia 
+# Prévia 
 
 
 ![Home Desktop](https://github.com/rngrodrigues/portfolio/blob/main/assets/img/home.png?raw=true)
@@ -78,7 +86,7 @@ As tecnologias utilizadas foram:
 ![Home Mobile](https://github.com/rngrodrigues/portfolio/blob/main/assets/img/home-mobile.png?raw=true) 
 
 
-# 📬 Contato
+# Contato
 
 Você pode entrar em contato comigo por:
 
