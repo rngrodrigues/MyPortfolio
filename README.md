@@ -10,6 +10,12 @@
   </a>
 </p>
 
+# Prévia 
+
+![Home Desktop](https://github.com/rngrodrigues/portfolio/blob/main/assets/img/home.png?raw=true)
+
+![Home Mobile](https://github.com/rngrodrigues/portfolio/blob/main/assets/img/home-mobile.png?raw=true) 
+
 # Portfólio Pessoal
 
 Um projeto web responsivo e organizado onde apresento meus projetos, habilidades, experiências e formas de contato.
@@ -92,15 +98,6 @@ js/
 index.html
 README.md
 ```
-
-# Prévia 
-
-
-![Home Desktop](https://github.com/rngrodrigues/portfolio/blob/main/assets/img/home.png?raw=true)
-
-
-![Home Mobile](https://github.com/rngrodrigues/portfolio/blob/main/assets/img/home-mobile.png?raw=true) 
-
 
 # Contato
 
