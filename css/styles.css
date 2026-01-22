@@ -152,10 +152,7 @@ header {
         opacity: 1;
         transform: rotate(0deg);
     }
-
-
     .menu-items {
-
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -211,30 +208,35 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 6rem;
+    padding: 1rem;
     height: 40rem;
     overflow: hidden;
 }
 
 .img-inicio img {
       max-width: 100%;
-    border-radius: 50%;
+    border-radius: 25%;
+    box-shadow: 0 0 10px 2px gray;
+ background: linear-gradient(to left, var(--cor-azul), #460d0d);
+}
+@keyframes waveGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 300% 0%; 
+    }
 }
 
 .back-end {
+   background: linear-gradient(90deg, var(--cor-azul), gray, var(--cor-azul), gray, var(--cor-azul));
+     background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: block;
     position: relative;
+        animation: waveGradient 5s linear infinite;
 }
-
-.back-end:before {
-    content: '';
-    position: absolute;
-    left: 25%;
-    bottom: 0;
-    height: 2px;
-    width: 50%;
-    background: linear-gradient(to left, var(--cor-azul), #5c1f1f);
-}
-
 
 #texto-inicio {
     display: flex;
@@ -248,7 +250,13 @@ header {
     font-size: clamp(2.4rem, 12vw, 8rem);
     margin-bottom: 3rem;
     margin-top: 3rem;
+    background: linear-gradient(90deg, var(--cor-azul), gray, var(--cor-azul), gray, var(--cor-azul));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        animation: waveGradient 5s linear infinite;
 }
+
 
 #texto-inicio p:first-of-type {
     font-size: clamp(2.2rem, 2.5vw, 3rem);
@@ -888,14 +896,16 @@ time {
 }
 
 #img-sobre {
-    background-color: gray;
+    box-shadow: 0 0 8px 1px gray;
     border-radius: 5rem;
     overflow: hidden;
     margin: 5rem;
+  
 }
 
 #img-sobre img {
     max-width: 100%;
+    vertical-align: middle;
 }
 
 #contato {
@@ -1097,4 +1107,18 @@ font-size: 23px;
     .div-grid .fa-info-circle {
 display: block;
     }
+}
+.fade-in {
+    margin: 0;
+padding:0;
+    opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
