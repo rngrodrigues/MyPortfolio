@@ -5,13 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfólio de Renan Rodrigues">
-    <link rel="icon" href="assets/img/logo.webp">
+  <link rel="icon" href="assets/img/logo.webp">
   <title>Renan Rodrigues</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="all" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" media="all" onload="this.media='all'">
+
+  <link rel="stylesheet" href="css/reset.css" media="all" onload="this.media='all'">
+  <link rel="stylesheet" href="css/styles.css" media="all" onload="this.media='all'">
+
+  <noscript>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </noscript>
+
+    <script src="js/main.js" defer></script>
+    
 </head>
+
 
 <body>
 
@@ -20,7 +36,7 @@
       <ul id="menu-principal" class="navbar">
         <li class="logo"><a href="#inicio">RR</a></li>
         <li style="padding: 0;">
-        <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal" onclick="toggleMenu()">
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
           <i class="fa-solid fa-bars toggle-icon" id="menu-icon"></i>
           <i class="fa-solid fa-xmark toggle-icon" id="close-icon"></i>
         </button>
@@ -33,7 +49,7 @@
             <li><a class="item-menu" href="#sobre">SOBRE</a></li>
             <li><a class="item-menu" href="#contato">CONTATO</a></li>
             <li class="buttons">
-              <button id="toggleTheme" class="botao-tema"  aria-label="Alternar tema claro e escuro" onclick="alterarTema()">
+              <button id="toggleTheme" class="botao-tema"  aria-label="Alternar tema claro e escuro">
                 <i class="fas fa-moon icon moon" id="icon"></i>
               </button>
             </li>
@@ -45,7 +61,7 @@
   <main>
 
     <div class="max-width-container">
-      <div id="inicio" class="img-inicio"><img src="assets/img/img-inicio.webp" alt="Foto de Renan Rodrigues, com efeito de desmaterialização em pixels, desenvolvedor de software"></div>
+      <div id="inicio" class="img-inicio"><img src="assets/img/img-inicio.webp" alt="Foto de Renan Rodrigues, com efeito de desmaterialização em pixels, desenvolvedor de software" fetchpriority="high"></div>
       <section id="texto-inicio">
         <h1>Desenvolvedor <span class="back-end" data-text="Back-End"> de <br> Software </span></h1>
         <p> Programar é meu jeito de dar forma ao futuro.</p>
@@ -98,7 +114,7 @@
           <h2> Frontend</h2>
           <h3 class="subt-card"><i class="fas fa-desktop" style="margin-right: 1rem;"></i>Responsividade e Usabilidade</h3>
           <p>Base sólida em desenvolvimento de interfaces responsivas e intuitivas, com foco na experiência do usuário e conhecimento em integração com APIs. </p><a
-            class="link-modal" data-modal="modal-habilidades"><i class="fas fa-info-circle" aria-hidden="true"
+            role="button" class="link-modal" data-modal="modal-habilidades"><i class="fas fa-info-circle" aria-hidden="true"
               style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a>
         </div>
         
@@ -106,7 +122,7 @@
           <h2>Backend </h2>
           <h3 class="subt-card"><i class="fas fa-server" style="margin-right: 1rem;"></i>APIs e Regras de Negócio</h3>
           <p> Desenvolvimento de APIs, aplicando noções básicas de arquitetura, 
-            lógica de programação, validação de dados e tratamento de erros.</p><a
+            lógica de programação, validação de dados e tratamento de erros.</p><a role="button"
             class="link-modal" data-modal="modal-habilidades2"><i class="fas fa-info-circle" aria-hidden="true"
               style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a>          
         </div>
@@ -115,7 +131,7 @@
           <h2>Banco de Dados</h2>
           <h3 class="subt-card"><i class="fas fa-database" style="margin-right: 1rem;"></i>Armazenamento de Dados</h3>
           <p> Modelagem de dados e consultas SQL, com foco em organização, integridade e otimização. 
-            Conhecimento em views, índices e controle de transações.</p><a
+            Conhecimento em views, índices e controle de transações.</p><a role="button"
             class="link-modal" data-modal="modal-habilidades3"><i class="fas fa-info-circle" aria-hidden="true"
               style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a>
         </div>
@@ -198,7 +214,7 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
      <div id="grid-projetos">
       <article class="div-grid">
         <i class="fa fa-info-circle"></i>
-        <img src="assets/img/projeto1.webp" alt="Mockup com aplicativo de treino em React Native.">
+        <img src="assets/img/projeto1.webp" alt="Mockup com aplicativo de treino em React Native." loading="lazy">
         <div class="texto-grid">
           <h2 class="titulo-grid">APP Treino <i class="devicon-react-plain" title="React Native"></i> 
             <i
@@ -218,7 +234,7 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
 
       <article class="div-grid">
         <i class="fa fa-info-circle"></i>
-        <img src="assets/img/projeto2.webp" alt="Mockup com imagens do meu portfólio em dispositivos diferentes.">
+        <img src="assets/img/projeto2.webp" alt="Mockup com imagens do meu portfólio em dispositivos diferentes." loading="lazy">
         <div class="texto-grid">
           <h2 class="titulo-grid">Portfólio <i class="devicon-html5-plain" title="HTML"></i> <i
               class="devicon-css3-plain" title="CSS"></i> <i class="devicon-javascript-plain" title="Java Script"></i>
@@ -235,7 +251,7 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
 
       <article class="div-grid">
         <i class="fa fa-info-circle"></i>
-        <img src="assets/img/projeto3.webp" alt="Mockup com sistema web ListProgress em React, em desktop e mobile.">
+        <img src="assets/img/projeto3.webp" alt="Mockup com sistema web ListProgress em React, em desktop e mobile." loading="lazy">
         <div class="texto-grid">
           <h2 class="titulo-grid">ListProgress 
             <i class="devicon-express-original-wordmark" title="Express" style="font-size: clamp(3rem, 2.5vw, 5rem); font-weight: bold;"></i>
@@ -244,7 +260,7 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
           <p class="paragrafo-grid">Sistema web para gestão e acompanhamento de metas, com organização em cards e tarefas personalizáveis, focado em produtividade.</p>
           <div>
             <a href="https://listprogress.vercel.app/" target="_blank" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square"
-                style="margin-right: 0.5rem;"></i>Ver projeto</a>
+                style="margin-right: 0.5rem;"></i>Ver ListProgress</a>
             <a href="https://github.com/rngrodrigues/ListProgress" target="_blank" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square"
                 style="margin-right: 0.5rem;"></i>Código</a>
           </div>
@@ -253,7 +269,7 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
 
       <article class="div-grid">
         <i class="fa fa-info-circle"></i>
-        <img src="assets/img/projeto4.webp" alt="Mockup com o aplicativo desktop do Music Analyser.">
+        <img src="assets/img/projeto4.webp" alt="Mockup com o aplicativo desktop do Music Analyser." loading="lazy">
         <div class="texto-grid">
           <h2 class="titulo-grid">Music Analyser  <i class="devicon-python-plain" title="Python"></i> 
               <i class="devicon-pandas-plain" title="Pandas"></i>
@@ -262,7 +278,7 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
           <p class="paragrafo-grid">Aplicação de Big Data para processamento de dados musicais, realizando limpeza, transformação e visualização dos resultados por meio de gráficos.</p>
           <div>
             <a href="https://musicanalyser.vercel.app/" target="_blank" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square"
-                style="margin-right: 0.5rem;"></i>Ver projeto</a>
+                style="margin-right: 0.5rem;"></i>Ver MusicAnalyser</a>
             <a href="https://github.com/rngrodrigues/MusicAnalyser" target="_blank" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square"
                 style="margin-right: 0.5rem;"></i>Código</a>
           </div>
@@ -324,7 +340,7 @@ Destaco também meus aprendizados em modelagem de dados relacionais (ER/DER).</p
 </div>
     <section id="sobre">
       <div class="sobre-flex">
-        <div id="img-sobre"><img src="assets/img/img-sobre.webp" alt="Imagem de rosto do Renan Rodrigues de frente."></div>
+        <div id="img-sobre"><img src="assets/img/img-sobre.webp" alt="Imagem de rosto do Renan Rodrigues de frente." loading="lazy"></div>
         <div class="conteudo-sobre">
           <h2 class="titulo-sobre">Algumas palavras sobre mim</h2>
 
@@ -431,15 +447,13 @@ Destaco também meus aprendizados em modelagem de dados relacionais (ER/DER).</p
   
       <div class="direitos-reservados"> <p>
   <a href="https://validator.w3.org/check?uri=referer" target="_blank">
-    <img style="border:0;width:66px;height:23px"
-         src="https://www.w3.org/Icons/valid-html401"
+    <img style="border:0;width:66px;height:28px"
+         src="assets/img/valid-html500.webp"
          alt="HTML válido!">
   </a>
 </p><p> © 2026 Renan Rodrigues. Todos os direitos reservados. </p></div>
 
  
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

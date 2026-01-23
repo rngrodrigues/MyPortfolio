@@ -4,9 +4,10 @@ const projetos = document.getElementById("projetos");
 const sobre = document.getElementById("sobre");
 const button = document.getElementById('toggleTheme'); 
 const icon = button.querySelector('.icon');
-
 const menuItems = document.querySelector(".menu-items");
 const menuToggle = document.querySelector(".menu-toggle");
+
+menuToggle.addEventListener("click", toggleMenu);
 
 document.addEventListener("DOMContentLoaded", () => {
   const temaSalvo = localStorage.getItem("tema");
