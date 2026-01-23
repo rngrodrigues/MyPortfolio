@@ -782,7 +782,7 @@ justify-content: center;
     background-color: rgb(0, 0, 20);
 }
 
-.time-line-content h2 {
+.time-line-content h3 {
     color: var(--cor-azul);
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     margin-bottom: 0.5rem;
@@ -999,7 +999,11 @@ form button:hover {
 .titulo-container-ctt {
     font-size: clamp(2.5rem, 2vw, 4rem);
     margin-bottom: 3rem;
-    color: var(--cor-azul);
+    background: linear-gradient(90deg, var(--cor-azul), gray, var(--cor-azul), gray, var(--cor-azul));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: waveGradient 5s linear infinite;
 }
 
 .infos-container-ctt {

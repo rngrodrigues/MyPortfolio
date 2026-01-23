@@ -16,12 +16,14 @@
 <body>
 
   <header id="menu">
-    <nav>
-      <ul class="navbar">
+    <nav aria-label="Menu principal">
+      <ul id="menu-principal" class="navbar">
         <li class="logo"><a href="#inicio">RR</a></li>
-        <li class="menu-toggle" onclick="toggleMenu()">
+        <li>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal" onclick="toggleMenu()">
           <i class="fa-solid fa-bars toggle-icon" id="menu-icon"></i>
           <i class="fa-solid fa-xmark toggle-icon" id="close-icon"></i>
+        </button>
         </li>
         <li class="menu-container">
           <ul class="menu-items">
@@ -31,7 +33,7 @@
             <li><a class="item-menu" href="#sobre">SOBRE</a></li>
             <li><a class="item-menu" href="#contato">CONTATO</a></li>
             <li class="buttons">
-              <button id="toggleTheme" class="botao-tema" onclick="alterarTema()">
+              <button id="toggleTheme" class="botao-tema"  aria-label="Alternar tema claro e escuro" onclick="alterarTema()">
                 <i class="fas fa-moon icon moon" id="icon"></i>
               </button>
             </li>
@@ -43,21 +45,21 @@
   <main>
 
     <div class="max-width-container">
-      <div id="inicio" class="img-inicio"><img src="assets/img/img-inicio.webp" alt=""></div>
+      <div id="inicio" class="img-inicio"><img src="assets/img/img-inicio.webp" alt="Foto de Renan Rodrigues, com efeito de desmaterialização em pixels, desenvolvedor de software"></div>
       <section id="texto-inicio">
         <h1>Desenvolvedor <span class="back-end" data-text="Back-End"> de <br> Software </span></h1>
         <p> Programar é meu jeito de dar forma ao futuro.</p>
 
         <div class="container-icons-social">
-          <a class="social-icon" href="https://www.linkedin.com/in/devrenanrodrigues/" target="_blank">
+          <a class="social-icon" href="https://www.linkedin.com/in/devrenanrodrigues/" aria-label="LinkedIn de Renan Rodrigues" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
           </a>
 
-          <a class="social-icon" href="https://github.com/devrnrodrigues/" target="_blank">
+          <a class="social-icon" href="https://github.com/devrnrodrigues/" aria-label="GitHub de Renan Rodrigues" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
 
-          <a class="social-icon" href="https://wa.me/5521976333733" target="_blank">
+          <a class="social-icon" href="https://wa.me/5521976333733" aria-label="Whatsapp de Renan Rodrigues" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>
@@ -96,7 +98,7 @@
           <h2> Frontend</h2>
           <h3 class="subt-card"><i class="fas fa-desktop" style="margin-right: 1rem;"></i>Responsividade e Usabilidade</h3>
           <p>Base sólida em desenvolvimento de interfaces responsivas e intuitivas, com foco na experiência do usuário e conhecimento em integração com APIs. </p><a
-            class="link-modal" data-modal="modal-habilidades"><i class="fas fa-info-circle"
+            class="link-modal" data-modal="modal-habilidades"><i class="fas fa-info-circle" aria-hidden="true"
               style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a>
         </div>
         
@@ -105,7 +107,7 @@
           <h3 class="subt-card"><i class="fas fa-server" style="margin-right: 1rem;"></i>APIs e Regras de Negócio</h3>
           <p> Desenvolvimento de APIs, aplicando noções básicas de arquitetura, 
             lógica de programação, validação de dados e tratamento de erros.</p><a
-            class="link-modal" data-modal="modal-habilidades2"><i class="fas fa-info-circle"
+            class="link-modal" data-modal="modal-habilidades2"><i class="fas fa-info-circle" aria-hidden="true"
               style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a>          
         </div>
 
@@ -114,16 +116,16 @@
           <h3 class="subt-card"><i class="fas fa-database" style="margin-right: 1rem;"></i>Armazenamento de Dados</h3>
           <p> Modelagem de dados e consultas SQL, com foco em organização, integridade e otimização. 
             Conhecimento em views, índices e controle de transações.</p><a
-            class="link-modal" data-modal="modal-habilidades3"><i class="fas fa-info-circle"
+            class="link-modal" data-modal="modal-habilidades3"><i class="fas fa-info-circle" aria-hidden="true"
               style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a>
         </div>
         
       </section>
 
-      <div id="modal-habilidades">
+      <div id="modal-habilidades" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-frontend">
         <div class="modal-content">
-          <button class="close-modal">&times;</button>
-       <h2>Frontend</h2>
+          <button class="close-modal" aria-label="Fechar modal">&times;</button>
+       <h2 id="titulo-modal-frontend">Frontend</h2>
 
 <p>
 Possuo base sólida no desenvolvimento de interfaces responsivas, garantindo que as aplicações se adaptem corretamente a diferentes tamanhos de tela, como desktops, tablets e dispositivos móveis.
@@ -143,10 +145,10 @@ Realizo o consumo de APIs utilizando <strong>fetch</strong>, tratando respostas 
         </div>
       </div>
 
-     <div id="modal-habilidades2">
+     <div id="modal-habilidades2" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-backend">
         <div class="modal-content">
-          <button class="close-modal">&times;</button>
-        <h2> Backend </h2>
+          <button class="close-modal" aria-label="Fechar modal">&times;</button>
+        <h2 id="titulo-modal-backend"> Backend </h2>
         <p>
 Tenho noções em lógica de programação, utilizando variáveis, operadores, estruturas condicionais, laços de repetição, contadores e algoritmos para resolver problemas de forma eficiente.
 </p>
@@ -172,7 +174,7 @@ Utilizo versionamento de código com Git, aplicando conceitos como <strong>branc
  
      <div id="modal-habilidades3">
         <div class="modal-content">
-          <button class="close-modal">&times;</button>
+          <button class="close-modal" aria-label="Fechar modal">&times;</button>
         <h2> Banco de Dados </h2>
         <p>
 Tenho conhecimento em modelagem de banco de dados relacional, utilizando conceitos como <strong>Primary Key, Foreign Key, UNIQUE, índices</strong> e relacionamentos (1:1, 1:N, N:N).
@@ -194,9 +196,9 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
     </div>
 
      <div id="grid-projetos">
-      <div class="div-grid">
+      <article class="div-grid">
         <i class="fa fa-info-circle"></i>
-        <img src="assets/img/projeto1.jpg" alt="">
+        <img src="assets/img/projeto1.jpg" alt="Mockup com aplicativo de treino em React Native.">
         <div class="texto-grid">
           <h2 class="titulo-grid">APP Treino <i class="devicon-react-plain" title="React Native"></i> 
             <i
@@ -212,11 +214,11 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
                 style="margin-right: 0.5rem;"></i>Código</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="div-grid">
+      <article class="div-grid">
         <i class="fa fa-info-circle"></i>
-        <img src="assets/img/projeto2.jpg" alt="">
+        <img src="assets/img/projeto2.jpg" alt="Mockup com imagens do meu portfólio em dispositivos diferentes.">
         <div class="texto-grid">
           <h2 class="titulo-grid">Portfólio <i class="devicon-html5-plain" title="HTML"></i> <i
               class="devicon-css3-plain" title="CSS"></i> <i class="devicon-javascript-plain" title="Java Script"></i>
@@ -229,11 +231,11 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
                 style="margin-right: 0.5rem;"></i>Código</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="div-grid">
+      <article class="div-grid">
         <i class="fa fa-info-circle"></i>
-        <img src="assets/img/projeto3.jpg" alt="">
+        <img src="assets/img/projeto3.jpg" alt="Mockup com sistema web ListProgress em React, em desktop e mobile.">
         <div class="texto-grid">
           <h2 class="titulo-grid">ListProgress 
             <i class="devicon-express-original-wordmark" title="Express" style="font-size: clamp(3rem, 2.5vw, 5rem); font-weight: bold;"></i>
@@ -247,11 +249,11 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
                 style="margin-right: 0.5rem;"></i>Código</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="div-grid">
+      <article class="div-grid">
         <i class="fa fa-info-circle"></i>
-        <img src="assets/img/projeto4.png" alt="">
+        <img src="assets/img/projeto4.png" alt="Mockup com o aplicativo desktop do Music Analyser.">
         <div class="texto-grid">
           <h2 class="titulo-grid">Music Analyser  <i class="devicon-python-plain" title="Python"></i> 
               <i class="devicon-pandas-plain" title="Pandas"></i>
@@ -265,11 +267,8 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
                 style="margin-right: 0.5rem;"></i>Código</a>
           </div>
         </div>
-      </div>
-
-      
-    </div>
-
+    </article>
+</div>
 
     <div class="container-exp">
       <h2 id="experiencia" class="titulo-exp">EXPERIÊNCIA</h2>
@@ -279,10 +278,10 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
     <section class="time-line">
       <div class="container-time-line">
         <div class="time-line-content">
-          <h2>
+          <h3>
             Formação .NET (SENAC)
      
-          </h2>
+          </h3>
           <time datetime="2021">Jul de 2021 </time> <time datetime="2022">a Jan de 2022</time>
           <p>Curso profissionalizante intensivo de seis meses que forneceu a minha primeira base prática e teórica em 
             programação. Essa formação foi o ponto de partida para minha entrada no mercado de trabalho.</p>
@@ -290,7 +289,7 @@ Tenho atenção à integridade e organização dos dados, aplicando boas prátic
       </div>
       <div class="container-time-line">
         <div class="time-line-content">
-          <h2> Aprendiz Tecnologia (Stefanini IT) </h2>
+          <h3> Aprendiz Tecnologia (Stefanini IT) </h3>
           <time datetime="2022">Nov de 2022 </time> <time datetime="2024">a Jan de 2024</time>
           <p>
 Primeira experiência profissional, com mais de 1 ano,
@@ -300,9 +299,9 @@ Destaco também meus aprendizados em modelagem de dados relacionais (ER/DER).</p
       </div>
       <div class="container-time-line">
         <div class="time-line-content">
-          <h2> Seviços Administrativos (SENAC)
+          <h3> Seviços Administrativos (SENAC)
 
-          </h2>
+          </h3>
           <time datetime="2022">Nov de 2022 </time><time datetime="2024">a Jan de 2024</time>
           <p>Meu tempo no Senac durante o programa de Aprendizagem, contribuiu muito para o meu crescimento pessoal e profissional.
              Desenvolvi habilidades importantes
@@ -311,10 +310,10 @@ Destaco também meus aprendizados em modelagem de dados relacionais (ER/DER).</p
       </div>
       <div class="container-time-line">
         <div class="time-line-content">
-          <h2>
+          <h3>
             Análise e Desenvolvimento de Sistemas (Estácio)
 
-          </h2>
+          </h3>
           <time datetime="2024">Mar de 2024 </time><time datetime="2026">a Dez de 2026</time>
           <p>Atualmente curso ADS, adquirindo conhecimentos em programação, estrutura de dados e desenvolvimento web, mobile e desktop. 
             Busco aplicar esses conhecimentos em projetos práticos para evoluir na área de desenvolvimento de softwares.</p>
@@ -325,7 +324,7 @@ Destaco também meus aprendizados em modelagem de dados relacionais (ER/DER).</p
 </div>
     <section id="sobre">
       <div class="sobre-flex">
-        <div id="img-sobre"><img src="assets/img/img-sobre.webp" alt=""></div>
+        <div id="img-sobre"><img src="assets/img/img-sobre.webp" alt="Imagem de rosto do Renan Rodrigues de frente."></div>
         <div class="conteudo-sobre">
           <h2 class="titulo-sobre">Algumas palavras sobre mim</h2>
 
@@ -375,9 +374,12 @@ Destaco também meus aprendizados em modelagem de dados relacionais (ER/DER).</p
   <h2 class="titulo-card-ctt">Contato</h2>
 
   <form action="https://formsubmit.co/devrenanrodrigues@gmail.com" method="POST">
-    <input type="text" name="nome" placeholder="Nome" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+    <label for="nome"></label>
+    <input id="nome" type="text" name="nome" placeholder="Nome" required>
+    <label for="email"></label>
+    <input id="email" type="email" name="email" placeholder="Email" required>
+    <label for="mensagem"></label>
+    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
 
     <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
     <input type="hidden" name="_captcha" value="false">
@@ -385,8 +387,6 @@ Destaco também meus aprendizados em modelagem de dados relacionais (ER/DER).</p
     <button class="btn-enviar" type="submit">Enviar</button>
   </form>
 </div>
-
-
     </section>
   </main>
 
@@ -398,15 +398,15 @@ Destaco também meus aprendizados em modelagem de dados relacionais (ER/DER).</p
           <p>Em busca de uma oportunidade em desenvolvimento de software para aplicar e expandir meus
             conhecimentos.</p>
           <div>
-            <a class="social-icon" href="https://www.linkedin.com/in/devrenanrodrigues/" target="_blank">
+            <a class="social-icon" aria-label="LinkedIn de Renan Rodrigues" href="https://www.linkedin.com/in/devrenanrodrigues/" target="_blank">
               <i class="fa-brands fa-linkedin"></i>
             </a>
 
-            <a class="social-icon" href="https://github.com/devrnrodrigues" target="_blank">
+            <a class="social-icon" aria-label="Github de Renan Rodrigues" href="https://github.com/devrnrodrigues" target="_blank">
               <i class="fa-brands fa-github"></i>
             </a>
 
-            <a class="social-icon" href="https://wa.me/5521976333733" target="_blank">
+            <a class="social-icon" aria-label="Whatsappp de Renan Rodrigues" href="https://wa.me/5521976333733" target="_blank">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </div>
