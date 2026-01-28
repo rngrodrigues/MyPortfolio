@@ -42,7 +42,7 @@ header {
     display: none;
     color: var(--cor-azul);
     padding: 0;
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 .menu-items {
     display: flex;
@@ -722,9 +722,6 @@ cursor: pointer;
     max-width: 50%;
     position: relative;
     padding: 0 5rem 0 5rem;
-    animation: scroll-animation 3s ease-in-out;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
 }
 
 @keyframes scroll-animation {
@@ -1031,12 +1028,12 @@ footer section {
     color: white;
     padding-bottom: 1rem;
     min-width: 100%;
+    position: relative;
 }
-.direitos-reservados p:last-child {
-    margin-right: auto;
-}
-.direitos-reservados p:first-child {
-    margin-right: auto;
+.icones-valid {
+display: flex;
+position: absolute;
+left: 5rem;
 }
 
 @media (max-width: 768px) {
