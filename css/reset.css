@@ -3,20 +3,62 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
 }
+
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-a {
-    color: inherit;
-    text-decoration: none;  
-}
-li {
-    list-style: none;
-}
-button {
-    all: unset; 
-    cursor: pointer;
+
+body {
+    font-size: clamp(1.4rem, 1.2vw, 1.6rem);
 }
 
+h1 {
+    font-size: clamp(2.6rem, 4vw, 3.2rem);
+    font-weight: 600;
+    font-family: "Satoshi Light", "Satoshi Light Placeholder", sans-serif;
+}
+
+h2 {
+    font-size: clamp(2rem, 3vw, 2.4rem);
+    font-weight: bold;
+    font-family: "Satoshi Light", "Satoshi Light Placeholder", sans-serif;
+}
+
+h3 {
+    font-size: clamp(1.6rem, 2.2vw, 1.87rem);
+    font-weight: 400;
+    font-family: "Satoshi Light", "Satoshi Light Placeholder", sans-serif;
+}
+
+p {
+    font-size: clamp(1.4rem, 1.2vw, 1.6rem);
+    font-family: "Chillax Light", "Chillax Light Placeholder", sans-serif;
+}
+
+li {
+    font-size: clamp(1.4rem, 1.2vw, 1.6rem);
+    font-family: "Satoshi Regular", sans-serif;
+    list-style: none;
+}
+
+a {
+    font-size: clamp(1.4rem, 1.2vw, 1.6rem);
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: clamp(1.4rem, 1.2vw, 1.6rem);
+    font-family: inherit;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    font-weight: bold;
+}
